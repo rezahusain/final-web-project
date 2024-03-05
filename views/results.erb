@@ -1,0 +1,12 @@
+  <h1>Upcoming Events!</h1>
+  <%@events.each do |event|%>
+    <div id="event">
+      <p><img src=<%=event["performers"][0]["image"]%>></p>
+      <p>ID: <%=event["id"]%></p>
+      <p>Title: <%=event["title"]%></p>
+      <p>Date: <%=Date.parse(event["datetime_utc"])%></p>
+      <p>Venue: <%=event["venue"]["name"]%></p>
+      <p>Average Price: $<%=event["stats"]["average_price"]%></p>
+      <p><a href="<%=event["url"]%>">Buy Tickets Here!</a></p>
+    </div>
+  <%end%>
