@@ -1,18 +1,6 @@
-# sinatra-template
+# final-web-project
 
-Use this repository to create new Sinatra apps. 
-
-Optionally, to use `ActiveRecord` for database operations, add to the `app.rb`:
-
-```ruby
-require "sinatra/activerecord"
-```
-
-And in the `config/environment.rb` file add this code block:
-
-```ruby
-configure do
-  # setup a database connection
-  set(:database, { adapter: "sqlite3", database: "db/development.sqlite3" })
-end
-```
+Hello guys! Welcome to my Event Finder web project :) Diving right in, I used the SeatGeek API in order to access upcoming events and all of their details.
+Accessing the SeatGeek API required some private information given which I stored in my Codespaces Secrets. After being able to access the API, I started writing code which queried the information based on what even I would like to have searched for. After looking through some SeatGeek API documentation, I found a little method which I could write in the API URL which could achieve that. After modifying the URL and navigating my way through the JSON array result, I was able to grab all the data needed.
+Now I began designing the pages. I created the home page which has a short description with what the website's about and below I have a search area with a button. This is where you'll be able to look up events using key words. After submitting a keyword or multiple keywords, the website will lead you to a results page which shows a lot of the upcoming events related to that keyword(s). I designed this page showing a lot of the results I got from the JSON array as well as a nice photo for each event as a finishing touch :) Styling wise I made sure to put a box around each event just to differentiate.
+Overall though this website is very straightforward. Play around and see what comes up! By the way - you might not even need SeatGeek when you have this at your convenience ;)
